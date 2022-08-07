@@ -8,7 +8,10 @@ const NetflixApp: FC = () => {
 	const [isProfilePage, setIsProfilePage] = useState(true);
 	return (
 		<div className="h-screen from-[#141414] to-[#141414] bg-gradient-to-b text-white">
-			<Header isProfilePage={isProfilePage} />
+			<Header
+				setIsProfilePage={setIsProfilePage}
+				isProfilePage={isProfilePage}
+			/>
 			<div className="h-full">
 				{isProfilePage ? (
 					<ProfilePage setIsProfilePage={setIsProfilePage} />

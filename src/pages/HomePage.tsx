@@ -25,29 +25,31 @@ const HomePage: FC = () => {
 						alt="Stranger Things"
 					/>
 					<div className="flex text-3xl items-center">
-						<TopTen />{" "}
-						<span className="drop-shadow-md ml-2">#4 in TV Shows Today</span>
+						<TopTen />
+						<span className="drop-shadow-md ml-2 font-bold">
+							#4 in TV Shows Today
+						</span>
+					</div>
+					<div className="text-xl font-light">
+						When a young boy vanishes, a small town uncovers a mystery involving
+						secret experiments, terrifying supernatural forces and one strange
+						little girl.
 					</div>
 					<div>
-						<div className="flex gap-4 text-lg">
-							<button className="bg-white flex text-black rounded-md px-5 py-2">
+						<div className="flex gap-4 text-lg items-center">
+							<button className="bg-white flex text-black rounded-md px-7 items-center py-2">
 								<PlayIcon />
 								PLAY
 							</button>
-							<button className="bg-gray-800/50 flex rounded-md px-5 py-2">
+							<button className="bg-gray-800/50 flex items-center rounded-md px-5 py-2">
 								<InfoIcon />
 								More Info
 							</button>
 						</div>
 					</div>
-					<div className="text-xl">
-						When a young boy vanishes, a small town uncovers a mystery involving
-						secret experiments, terrifying supernatural forces and one strange
-						little girl.
-					</div>
 				</div>
 			</div>
-			<div>hel</div>
+			<div></div>
 		</div>
 	);
 };
