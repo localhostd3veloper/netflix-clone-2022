@@ -1,8 +1,10 @@
-import React from "react";
-const NetflixApp = () => {
+import { FC, useState } from "react";
+import Header from "./components/Header";
+const NetflixApp: FC = () => {
+	const [isProfilePage] = useState(false);
 	return (
-		<div>
-			<h1>Netflix</h1>
+		<div className="h-screen from-[#141414] to-[#141414]/95 bg-gradient-to-b">
+			<Header isProfilePage={isProfilePage} />
 		</div>
 	);
 };
