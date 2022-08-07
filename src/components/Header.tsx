@@ -11,7 +11,7 @@ interface HeaderProps {
 
 const Header: FC<HeaderProps> = ({ isProfilePage, setIsProfilePage }) => {
 	const [scrollPosition, setScrollPosition] = useState(0);
-	const getScrollPosition = () => {
+	const isScrollAtTop = () => {
 		if (scrollPosition <= 0) {
 			return true;
 		} else {
@@ -27,7 +27,7 @@ const Header: FC<HeaderProps> = ({ isProfilePage, setIsProfilePage }) => {
 	return (
 		<div
 			className={`from-black ${
-				getScrollPosition() ? "to-transparent" : "to-[#141414]"
+				isScrollAtTop() ? "to-transparent" : "to-[#141414]"
 			}  bg-gradient-to-b fixed px-16 py-5 top-0 flex gap-12 items-center w-full duration-500 transition-colors z-10`}
 		>
 			<img
