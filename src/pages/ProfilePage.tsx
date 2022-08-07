@@ -17,7 +17,7 @@ const ProfilePage: FC<IProfilePage> = ({ setIsProfilePage }) => {
 							key={profile.id}
 						>
 							<img
-								className="object-cover h-40 w-40 rounded-md hover:border-2 hover:border-white hover:scale-125 transition-all duration-200"
+								className="object-cover h-40 w-40 rounded-md hover:border-2 hover:border-white hover:scale-125 transition-all duration-300"
 								src={profile.avatar}
 								alt={profile.user}
 							/>

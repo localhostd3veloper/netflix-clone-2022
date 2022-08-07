@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { navs } from "../data/static/navs";
 import { profiles } from "../data/static/profiles";
 import { BellIcon } from "../data/svgs/bell-icon";
@@ -10,20 +10,25 @@ interface HeaderProps {
 }
 
 const Header: FC<HeaderProps> = ({ isProfilePage, setIsProfilePage }) => {
+	const [scrollPosition, setScrollPosition] = useState(0);
 	const getScrollPosition = () => {
-		const scrollPosition = window.scrollY;
-		console.log(scrollPosition);
 		if (scrollPosition <= 0) {
 			return true;
 		} else {
 			return false;
 		}
 	};
+
+	useEffect(() => {
+		window.onscroll = () => {
+			setScrollPosition(window.scrollY);
+		};
+	}, [scrollPosition]);
 	return (
 		<div
 			className={`from-black ${
 				getScrollPosition() ? "to-transparent" : "to-[#141414]"
-			}  bg-gradient-to-b fixed px-16 py-5 top-0 flex gap-12 items-center w-full z-50`}
+			}  bg-gradient-to-b fixed px-16 py-5 top-0 flex gap-12 items-center w-full duration-500 transition-colors z-10`}
 		>
 			<img
 				src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"

@@ -6,7 +6,7 @@ const HomePage: FC = () => {
 	return (
 		<div className="shadow-2xl">
 			<div id="video-item">
-				<video autoPlay loop className="h-screen w-screen object-cover">
+				<video muted autoPlay loop className="h-screen w-screen object-cover">
 					<source src={require("../data/video/trailer.mp4")} type="video/mp4" />
 					Your browser does not support HTML5 video.
 				</video>
@@ -49,7 +49,7 @@ const HomePage: FC = () => {
 					</div>
 				</div>
 			</div>
-			<div></div>
+			<div className="h-24 bg-[#141414]"></div>
 		</div>
 	);
 };
