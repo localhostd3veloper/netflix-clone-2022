@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { navs } from "../data/navs";
+import { navs } from "../data/static/navs";
 
 interface HeaderProps {
 	isProfilePage: boolean;

@@ -5,9 +5,9 @@ import { TopTen } from "../data/svgs/top-ten";
 const HomePage: FC = () => {
 	return (
 		<div className="shadow-2xl">
-			<div className="h-screen">
-				<video autoPlay muted loop className="h-screen w-screen object-cover">
-					<source src={require("./trailer.mp4")} type="video/mp4" />
+			<div id="video-item">
+				<video autoPlay loop className="h-screen w-screen object-cover">
+					<source src={require("../data/video/trailer.mp4")} type="video/mp4" />
 					Your browser does not support HTML5 video.
 				</video>
 				<div className="absolute w-4/12 left-32 bottom-[15vh] flex flex-col gap-4">
@@ -24,7 +24,7 @@ const HomePage: FC = () => {
 						className="w-60"
 						alt="Stranger Things"
 					/>
-					<div className="flex text-3xl items-center ">
+					<div className="flex text-3xl items-center">
 						<TopTen />{" "}
 						<span className="drop-shadow-md ml-2">#4 in TV Shows Today</span>
 					</div>
