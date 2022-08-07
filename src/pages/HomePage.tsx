@@ -6,7 +6,12 @@ const HomePage: FC = () => {
 	return (
 		<div className="shadow-2xl">
 			<div id="video-item">
-				<video muted autoPlay loop className="h-screen w-screen object-cover">
+				<video
+					muted={window.location.hostname === "localhost" ? true : false}
+					autoPlay
+					loop
+					className="h-screen w-screen object-cover"
+				>
 					<source src={require("../data/video/trailer.mp4")} type="video/mp4" />
 					Your browser does not support HTML5 video.
 				</video>
