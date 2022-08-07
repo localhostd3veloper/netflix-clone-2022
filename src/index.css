@@ -68,3 +68,23 @@ html {
 body {
 	font-family: "Netflix Sans", sans-serif;
 }
+/* width */
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #141414;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #202020;
+	border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
